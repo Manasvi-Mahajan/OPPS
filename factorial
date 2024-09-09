@@ -1,0 +1,22 @@
+class fact{
+    int fa(int n ){
+        if(n==1){
+            return 1;
+        }
+        else{
+            return n*fa(n-1);
+        }
+
+    }
+}
+
+
+
+public class factorial {
+    public static void main(String[] args) {
+        fact f = new fact();
+        System.out.println("The factorial of 12 is:");
+         System.out.println(f.fa(12));;
+    }
+
+}

@@ -1,0 +1,13 @@
+public class sum_AvgArr{
+    public static void main(String[] args) {
+        int arr[] = { 1,2,3,9,5};
+        int sum = 0;
+        int size = arr.length;
+        for(int i =0;i<5;i++){
+            sum = sum+arr[i];
+        }        
+        System.out.println("The sum of elements of array is :"+sum);
+        int  avg = sum/size;
+        System.out.println("The average of array is :"+avg);
+    }
+}

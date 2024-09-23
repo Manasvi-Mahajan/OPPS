@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class hcf {
+   static  int  HCF(int a , int b){
+       while(b!=0){
+        int temp = b;
+        b = a%b;
+        a = temp;}
+        return a ;
+    }
+ @SuppressWarnings("resource")
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the first number");
+    int a1 = sc.nextInt();
+    System.out.println("Enter the second number");
+    int b1 = sc.nextInt();
+    System.out.println("The HCF of two numbers is :");
+    System.out.println(HCF(a1,b1));
+
+    
+        
+    }
+}

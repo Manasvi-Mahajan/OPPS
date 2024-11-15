@@ -1,0 +1,44 @@
+//example 1
+class Vehicle{
+    public void k(){
+        System.out.println("vehicle is running safely... ");
+    }
+}
+class Bike extends Vehicle{
+    public void k(){
+        System.out.println("Bike is running safely...");
+    }
+}
+// example 2 
+class Bank{
+    int rateOfInterest(){
+        return 0;
+    }
+}
+class SBI extends Bank{
+    int rateOfInterest(){
+        return 8;
+    }
+}
+class Axis extends Bank{
+    int rateOfInterest(){
+        return 9;
+    }
+}
+class ICICI extends Bank{
+    int rateOfInterest(){
+        return 7;
+    }
+}
+public class methodOverriding {
+    public static void main(String[] args) {
+        Bike ob = new Bike();
+        ob.k();
+        SBI s = new SBI();
+        Axis a = new Axis();
+        ICICI i = new ICICI();
+        System.out.println(s.rateOfInterest());
+        System.out.println(a.rateOfInterest());
+        System.out.println(i.rateOfInterest());
+    }
+}

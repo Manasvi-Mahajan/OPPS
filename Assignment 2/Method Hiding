@@ -1,0 +1,22 @@
+class Human{
+    public static void Smile(){
+        System.out.println("The human smile's glows up the face of him");
+    }
+}
+
+class Baby extends Human{
+    public static void Smile(String msg){
+        System.out.println("The human greets:"+msg);
+    }
+}
+public class methodHiding {
+    public static void main(String[] args) {
+        Human h = new Human();
+        h.Smile();
+        Baby b = new Baby();
+        b.Smile();
+        b.Smile("Hello with a smile");
+        
+    }
+    
+}

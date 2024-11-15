@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Distance{
+    double  distance;
+    int speed = 60;
+    void travelTime( double distance ){
+        this.distance = distance;
+        double time = distance/speed;
+       System.out.println("The time taken in hours is:"+time);
+    }
+}
+
+class DistanceMKS extends Distance{
+    double distance ;
+    int speed = 100;
+    void travelTime(double distance){
+        this.distance = distance;
+        double distanceKM = distance*1.609;
+        double time = distanceKM/speed;
+        System.out.println("The time in seconds is :"+time);
+    }
+
+
+}
+public class Ass212 {
+    @SuppressWarnings("resource")
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the distance in miles :");
+       double n = sc.nextDouble();
+        DistanceMKS d = new DistanceMKS();
+        d.travelTime(n);
+    }
+}

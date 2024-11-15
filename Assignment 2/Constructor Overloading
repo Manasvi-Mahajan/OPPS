@@ -1,0 +1,22 @@
+class Add{
+    Add(int a){
+        a = a+10;
+        System.out.println("The value of a is :"+ a);
+    }
+    Add(int a , int b , int c){
+        a = a*b;
+        c = a+134;
+        b = a%c;
+        System.out.println("The value of a is :"+ a);
+        System.out.println("The value of b is :"+b);
+        System.out.println("The value of c is :"+ c);
+    }
+}
+public class constructorOverloading {
+    public static void main(String[] args) {
+        Add x = new Add(12);
+        Add  y = new Add(13);
+        Add z = new Add(122, 11, 5);
+    }
+    
+}

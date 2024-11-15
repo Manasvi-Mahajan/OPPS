@@ -1,0 +1,17 @@
+class MM{
+    String name;
+    int age;
+    MM(String name , int age){
+        this.name = name ;
+        this.age = age;
+    }
+}
+
+public class parameterizedConstructor {
+    public static void main(String[] args) {
+        MM a1 = new MM("Manasvi", 19);
+        System.out.println("The name of student is :"+a1.name);
+        System.out.println("The age is :"+a1.age);
+
+    }
+}

@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+class TooOlderException extends Exception {
+    public TooOlderException(String message) {
+        super(message);
+    }
+}
+
+class TooYoungerException extends Exception {
+    public TooYoungerException(String message) {
+        super(message);
+    }
+}
+
+public class ageException {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter candidate's name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter candidate's age: ");
+        int age = scanner.nextInt();
+
+        try {
+            if (age > 45) {
+                throw new TooOlderException("Candidate is too older.");
+            } else if (age < 20) {
+                throw new TooYoungerException("Candidate is too younger.");
+            } else {
+                System.out.println("Eligible: " + name);
+            }
+        } catch (TooOlderException | TooYoungerException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

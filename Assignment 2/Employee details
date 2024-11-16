@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Employee { 
+    String emp_id,emp_name ;
+    double gross_salary,basic_salary;
+    double hra ;
+
+    void employeeDetails(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the employee id :");
+        String emp_id = sc.nextLine();
+        System.out.println("Enter the employee name:");
+        String emp_name = sc.nextLine();
+        System.out.println("Enter the basic salary:");
+        double basic_salary = sc.nextDouble();
+
+    }
+
+
+    void displayGross_Salary(){
+       hra = 0.12*basic_salary;
+       gross_salary = basic_salary + hra;
+        System.out.println("Gross_Salary :"+gross_salary);
+    }
+
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        e.employeeDetails();
+        e.displayGross_Salary();
+    }
+}

@@ -1,0 +1,61 @@
+class Vehicle{
+    protected int regnNumber;
+    protected int speed;
+    protected String color ;
+    protected String ownerName;
+    public Vehicle(int regnNumber,int speed,String color,String ownerName){
+        this.color = color;
+        this.speed = speed;
+        this.ownerName = ownerName;
+        this.regnNumber = regnNumber;
+        
+    }
+    public void showData(){
+            System.out.println("This is vehicle class:");
+            
+        }
+
+}
+class Bus extends Vehicle{
+    private int routeNumber;
+     public Bus(int regnNumber,int s,String colour,String ownerName,int routeNumber){
+        super(regnNumber, s, colour, ownerName);
+        this.routeNumber = routeNumber;
+    }
+     public void showData(){
+        super.showData();
+        System.out.println("This is routenumber for bus:"+routeNumber);
+        System.out.println("Registration Number:"+regnNumber);
+        System.out.println("speed"+speed);
+        System.out.println("color:"+color);
+        System.out.println("ownerName:"+ownerName);
+    }
+
+
+}
+class Car extends Vehicle{
+    private String manufacturerName;
+    public Car(String manufacturerName,int regnNumber,int s,String colour,String ownerName){
+        super(regnNumber, s, colour, ownerName);
+        this.manufacturerName = manufacturerName;
+        
+    }
+    public void showData(){
+        super.showData();
+        System.out.println("Manufacturer Name :"+manufacturerName);
+        System.out.println("Registration Number:"+regnNumber);
+        System.out.println("speed"+speed);
+        System.out.println("color:"+color);
+        System.out.println("ownerName:"+ownerName);
+    }
+
+
+}
+public class Main {
+        public static void main(String[] args) {
+            Bus B = new Bus(8871, 100, "Black", "Raju", 120);
+            B.showData();
+            Car C = new Car("Maruti Motors", 7623, 70, "White", "Nayanjyoti Sharma");
+            C.showData();
+        }
+}

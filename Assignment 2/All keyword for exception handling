@@ -1,0 +1,30 @@
+import java.lang.Exception;
+class NegativeNumberException extends Exception {
+    public NegativeNumberException(String message) {
+        super(message);
+    }
+}
+
+public class exceptionHandling {
+    public static void checkNumber(int number) throws NegativeNumberException{
+        if (number < 0) {
+            throw new NegativeNumberException("The number " + number + " is negative.");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, -5, 3, -1, 7, 8};
+
+        for (int number : numbers) {
+            try {
+                checkNumber(number);
+            } catch (NegativeNumberException e) {
+                System.err.println("Caught NegativeNumberException: " + e.getMessage());
+            }catch (Exception e) {
+                System.err.println("Caught Exception: " + e.getMessage());
+            }    finally{
+              System.out.println("It will always work");
+    }
+        }
+    
+}

@@ -1,0 +1,12 @@
+public class Static {
+    static int var = 10;
+    static void weep(){
+        System.out.println("Weeping ");
+    }
+    
+    public static void main(String[] args) {
+        
+        weep();
+        System.out.println("The value of var is :"+var);
+     }
+}

@@ -1,0 +1,26 @@
+class Made{
+    String cookingTechnique;
+    String Item;
+    String mainIngredient;
+    public Made(String cookingTechnique,String Item,String mainIngredient){
+        this.cookingTechnique = cookingTechnique;
+        this.Item = Item;
+        this.mainIngredient = mainIngredient;
+   }
+    void Recipe(){
+        System.out.println("THE RECIPE OF TODAY IS:");
+        System.out.println("The cooking technique is :" + cookingTechnique);
+        System.out.println("The dish is:"+Item);
+        System.out.println("The main ingredient is:"+mainIngredient);
+
+
+    }
+
+}
+public class This {
+    public static void main(String[] args) {
+        Made M = new Made("Baking", "Cake", "Flour");
+        M.Recipe();
+    }
+    
+}

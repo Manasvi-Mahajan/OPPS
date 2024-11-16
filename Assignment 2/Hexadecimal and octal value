@@ -1,0 +1,32 @@
+class Num{
+    int number;
+     public Num(int number){
+        this.number = number;
+    }
+     void showNum(){
+        System.out.println("The number is "+ number);
+    }
+}
+class HexNum extends Num{
+   
+    public HexNum(int number){
+       super(number);
+    }
+     String num = Integer.toHexString(number);
+     String num1 = Integer.toOctalString(number);
+     void showNum(){
+        super.showNum(); 
+        System.out.println("The Hexnumber is "+ num);
+        System.out.println("The Octnumber is "+ num1);
+
+     }
+}
+
+public class HexandOct {
+    public static void main(String[] args) {
+      HexNum hexNum = new HexNum(12);
+      hexNum.showNum();
+  
+  
+}
+}
